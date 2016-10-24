@@ -1,5 +1,4 @@
 autoConvertOCType(1)
-include('CommonDefine.js')
 include('MainViewController.js')
 
 defineClass('AppDelegate', {

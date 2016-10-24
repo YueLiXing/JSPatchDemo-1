@@ -33,7 +33,7 @@ defineClass('MainViewController: UIViewController', {
             var NSTextAlignmentCenter = 1;
             lbl.setTextAlignment(NSTextAlignmentCenter);
             //多参数方法名使用 _ 分隔，如下面的 colorWithRed_green_blue_alpha
-            lbl.setBackgroundColor(UIColor.colorWithRed_green_blue_alpha(10 * i / 255.0, 100 / 255.0, 25 * i / 255.0, 1.0));
+            lbl.setBackgroundColor(UIColor.colorWithRed_green_blue_alpha((10*i)/255.0, 100/255.0, (25*i)/255.0, 1.0));
             
             //这里的字典使用javascript的字典
             vSubviewsArray.push({"view" : lbl,
@@ -41,7 +41,7 @@ defineClass('MainViewController: UIViewController', {
                                 });
 
         }
-            
+
         var horizontalScrollView = UIScrollView.alloc().initWithFrame({x:0,
                                                                        y:0,
                                                                    width:global.SCREEN_WIDTH,
@@ -57,7 +57,7 @@ defineClass('MainViewController: UIViewController', {
             var lbl = UILabel.alloc().initWithFrame({x:0, y:0, width:200, height:80});
             lbl.setText("我是第"+(i+1)+"个");
             lbl.setTextAlignment(global.NSTextAlignmentRight);
-            lbl.setBackgroundColor(UIColor.colorWithRed_green_blue_alpha(10 * i / 255.0, 100 / 255.0, 25 * i / 255.0, 1.0));
+            lbl.setBackgroundColor(UIColor.colorWithRed_green_blue_alpha((10*i)/255.0, 100/255.0, (25*i)/ 255.0, 1.0));
             hSubviewsArray.push({"view" : lbl,
                               "padding" : (i==0?(0):(5))
                                 });
