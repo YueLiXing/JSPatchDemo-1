@@ -5,11 +5,11 @@ require('UIViewController,UIScrollView,NSMutableArray,UILabel,NSString,UIColor')
 defineClass('MainViewController: UIViewController', {
     init: function() {
         self = self.super().init();
-        console.log("init");
+        console.log("MainViewController init ");
         return self;
     },
     viewDidLoad: function() {
-        console.log("viewDidLoad");
+        console.log("MainViewController viewDidLoad");
         self.super().viewDidLoad();
         self.view().setBackgroundColor(UIColor.purpleColor());
 
