@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF3992511DBDE7E600EBC554 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3992501DBDE7E600EBC554 /* main.m */; };
+		EF3992541DBDE7E600EBC554 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3992531DBDE7E600EBC554 /* AppDelegate.m */; };
+		EF39925C1DBDE7E600EBC554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF39925B1DBDE7E600EBC554 /* Assets.xcassets */; };
+		EF39925F1DBDE7E600EBC554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF39925D1DBDE7E600EBC554 /* LaunchScreen.storyboard */; };
+		EF3992671DBDE89B00EBC554 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */; };
+		EF3992691DBDE97100EBC554 /* patch in Resources */ = {isa = PBXBuildFile; fileRef = EF3992681DBDE97100EBC554 /* patch */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF39924C1DBDE7E600EBC554 /* JSPatchManual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSPatchManual.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3992501DBDE7E600EBC554 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF3992521DBDE7E600EBC554 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF3992531DBDE7E600EBC554 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF39925B1DBDE7E600EBC554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF39925E1DBDE7E600EBC554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF3992601DBDE7E600EBC554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
+		EF3992681DBDE97100EBC554 /* patch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = patch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF3992491DBDE7E600EBC554 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3992671DBDE89B00EBC554 /* JSPatchPlatform.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF3992431DBDE7E600EBC554 = {
+			isa = PBXGroup;
+			children = (
+				EF39924E1DBDE7E600EBC554 /* JSPatchManual */,
+				EF39924D1DBDE7E600EBC554 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF39924D1DBDE7E600EBC554 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF39924C1DBDE7E600EBC554 /* JSPatchManual.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF39924E1DBDE7E600EBC554 /* JSPatchManual */ = {
+			isa = PBXGroup;
+			children = (
+				EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */,
+				EF3992521DBDE7E600EBC554 /* AppDelegate.h */,
+				EF3992531DBDE7E600EBC554 /* AppDelegate.m */,
+				EF3992681DBDE97100EBC554 /* patch */,
+				EF39925B1DBDE7E600EBC554 /* Assets.xcassets */,
+				EF39925D1DBDE7E600EBC554 /* LaunchScreen.storyboard */,
+				EF3992601DBDE7E600EBC554 /* Info.plist */,
+				EF39924F1DBDE7E600EBC554 /* Supporting Files */,
+			);
+			path = JSPatchManual;
+			sourceTree = "<group>";
+		};
+		EF39924F1DBDE7E600EBC554 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF3992501DBDE7E600EBC554 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF39924B1DBDE7E600EBC554 /* JSPatchManual */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF3992631DBDE7E600EBC554 /* Build configuration list for PBXNativeTarget "JSPatchManual" */;
+			buildPhases = (
+				EF3992481DBDE7E600EBC554 /* Sources */,
+				EF3992491DBDE7E600EBC554 /* Frameworks */,
+				EF39924A1DBDE7E600EBC554 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSPatchManual;
+			productName = JSPatchManual;
+			productReference = EF39924C1DBDE7E600EBC554 /* JSPatchManual.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF3992441DBDE7E600EBC554 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "王亮";
+				TargetAttributes = {
+					EF39924B1DBDE7E600EBC554 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3EY2332LG6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EF3992471DBDE7E600EBC554 /* Build configuration list for PBXProject "JSPatchManual" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF3992431DBDE7E600EBC554;
+			productRefGroup = EF39924D1DBDE7E600EBC554 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF39924B1DBDE7E600EBC554 /* JSPatchManual */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF39924A1DBDE7E600EBC554 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF39925F1DBDE7E600EBC554 /* LaunchScreen.storyboard in Resources */,
+				EF3992691DBDE97100EBC554 /* patch in Resources */,
+				EF39925C1DBDE7E600EBC554 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF3992481DBDE7E600EBC554 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3992541DBDE7E600EBC554 /* AppDelegate.m in Sources */,
+				EF3992511DBDE7E600EBC554 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF39925D1DBDE7E600EBC554 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF39925E1DBDE7E600EBC554 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF3992611DBDE7E600EBC554 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF3992621DBDE7E600EBC554 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF3992641DBDE7E600EBC554 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3EY2332LG6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JSPatchManual",
+				);
+				INFOPLIST_FILE = JSPatchManual/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.demo.JSPatchManual;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF3992651DBDE7E600EBC554 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3EY2332LG6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JSPatchManual",
+				);
+				INFOPLIST_FILE = JSPatchManual/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.demo.JSPatchManual;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF3992471DBDE7E600EBC554 /* Build configuration list for PBXProject "JSPatchManual" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3992611DBDE7E600EBC554 /* Debug */,
+				EF3992621DBDE7E600EBC554 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF3992631DBDE7E600EBC554 /* Build configuration list for PBXNativeTarget "JSPatchManual" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3992641DBDE7E600EBC554 /* Debug */,
+				EF3992651DBDE7E600EBC554 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF3992441DBDE7E600EBC554 /* Project object */;
+}
