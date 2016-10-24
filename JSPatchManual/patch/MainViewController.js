@@ -29,7 +29,7 @@ defineClass('MainViewController: UIViewController', {
             lbl.setBackgroundColor(UIColor.colorWithRed_green_blue_alpha(10 * i / 255.0, 100 / 255.0, 25 * i / 255.0, 1.0));
             
             vSubviewsArray.push({"view": lbl,
-                             "padding" : ""+(i==0?(0):(i*2+5))
+                             "padding" : (i==0?(0):(i*2+5))
                                 });
 
         }
@@ -39,7 +39,7 @@ defineClass('MainViewController: UIViewController', {
                                                                    width:self.view().frame().width,
                                                                   height:100});
         vSubviewsArray.push({"view": horizontalScrollView,
-                         "padding" : "5"
+                         "padding" : 5
                             });
 
         var hSubviewsArray = [];
@@ -50,7 +50,7 @@ defineClass('MainViewController: UIViewController', {
             lbl.setText("我是第"+(i+1)+"个");
             lbl.setBackgroundColor(UIColor.colorWithRed_green_blue_alpha(10 * i / 255.0, 100 / 255.0, 25 * i / 255.0, 1.0));
             hSubviewsArray.push({"view": lbl,
-                             "padding" : ""+(i==0?(0):(5))
+                             "padding" : (i==0?(0):(5))
                                 });
         }
             

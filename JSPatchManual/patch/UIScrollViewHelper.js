@@ -23,7 +23,7 @@ defineClass('UIScrollViewHelper: NSObject', {
         for (var i=0; i<subviewsArray.length;i++) {
             var viewInfoDict = subviewsArray[i];
             var view = viewInfoDict["view"];
-            var padding = parseInt(viewInfoDict["padding"]);
+            var padding = viewInfoDict["padding"];
 
             if (isVertical) {
                 view.setFrame({x: (scrollView.frame().width - view.frame().width) / 2.0,
