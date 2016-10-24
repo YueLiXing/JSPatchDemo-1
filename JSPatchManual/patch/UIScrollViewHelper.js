@@ -4,7 +4,7 @@ defineClass('UIScrollViewHelper: NSObject', {
     // 实例方法
     init: function() {
         self = self.super().init();
-        console.log("init");
+        console.log("UIScrollViewHelper init");
         return self;
     }
 }, {
@@ -14,13 +14,16 @@ defineClass('UIScrollViewHelper: NSObject', {
         
         var firstViewInfoDict = subviewsArray[0];
         var firstView = firstViewInfoDict["view"];
-        var firstTopLeft = {x:firstView.frame().x,
-                            y:firstView.frame().y};
-
-        var currentTop = firstTopLeft.y;
+        var firstTopLeft = {
+                            x:firstView.frame().x,
+                            y:firstView.frame().y
+                           };
+            
         var currentLeft = firstTopLeft.x;
+        var currentTop = firstTopLeft.y;
 
-        for (var i=0; i<subviewsArray.length;i++) {
+        for (var i=0; i<subviewsArray.length; i++) {
+            
             var viewInfoDict = subviewsArray[i];
             var view = viewInfoDict["view"];
             var padding = viewInfoDict["padding"];
@@ -35,7 +38,8 @@ defineClass('UIScrollViewHelper: NSObject', {
                 currentTop += padding;
 
                 currentLeft = view.frame().x;
-            } else {
+            }
+            else {
                 view.setFrame({x: currentLeft + padding,
                                y: currentTop,
                            width: view.frame().width,
@@ -52,7 +56,8 @@ defineClass('UIScrollViewHelper: NSObject', {
 
         if (isVertical) {
             scrollView.setContentSize({width: scrollView.frame().width, height: currentTop});
-        } else {
+        }
+        else {
             scrollView.setContentSize({width: currentLeft, height: scrollView.frame().height});
         }
 

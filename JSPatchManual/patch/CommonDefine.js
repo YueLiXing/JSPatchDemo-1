@@ -1,6 +1,10 @@
 global.SCREEN_WIDTH = require('UIScreen').mainScreen().bounds().width;
 global.SCREEN_HEIGHT = require('UIScreen').mainScreen().bounds().height;
 
+global.NSTextAlignmentLeft = 0;
+global.NSTextAlignmentCenter = 1;
+global.NSTextAlignmentRight = 2;
+
 global.UIHelper = {
     bottomY:function(view) {
         var f = view.frame();
