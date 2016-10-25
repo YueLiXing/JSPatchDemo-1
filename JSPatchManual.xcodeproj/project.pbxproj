@@ -13,6 +13,12 @@
 		EF39925F1DBDE7E600EBC554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF39925D1DBDE7E600EBC554 /* LaunchScreen.storyboard */; };
 		EF3992671DBDE89B00EBC554 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */; };
 		EF3992691DBDE97100EBC554 /* patch in Resources */ = {isa = PBXBuildFile; fileRef = EF3992681DBDE97100EBC554 /* patch */; };
+		EF4502E11DBEF95C002DA845 /* DES3EncryptUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4502DC1DBEF95B002DA845 /* DES3EncryptUtil.m */; };
+		EF4502E21DBEF95C002DA845 /* MyBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4502DE1DBEF95B002DA845 /* MyBase64.m */; };
+		EF4502E31DBEF95C002DA845 /* DynamicChangeCode.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4502E01DBEF95B002DA845 /* DynamicChangeCode.m */; };
+		EF4502E61DBF08FE002DA845 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4502E51DBF08FE002DA845 /* MainViewController.m */; };
+		EF4502E91DBF38B8002DA845 /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4502E81DBF38B8002DA845 /* SuccessViewController.m */; };
+		EF95FEAA1DBEF3480051F8C8 /* FailureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF95FEA91DBEF3480051F8C8 /* FailureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,19 @@
 		EF3992601DBDE7E600EBC554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		EF3992681DBDE97100EBC554 /* patch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = patch; sourceTree = "<group>"; };
+		EF4502D91DBEF95B002DA845 /* CommonParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonParameters.h; sourceTree = "<group>"; };
+		EF4502DB1DBEF95B002DA845 /* DES3EncryptUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DES3EncryptUtil.h; sourceTree = "<group>"; };
+		EF4502DC1DBEF95B002DA845 /* DES3EncryptUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DES3EncryptUtil.m; sourceTree = "<group>"; };
+		EF4502DD1DBEF95B002DA845 /* MyBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBase64.h; sourceTree = "<group>"; };
+		EF4502DE1DBEF95B002DA845 /* MyBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBase64.m; sourceTree = "<group>"; };
+		EF4502DF1DBEF95B002DA845 /* DynamicChangeCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicChangeCode.h; sourceTree = "<group>"; };
+		EF4502E01DBEF95B002DA845 /* DynamicChangeCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicChangeCode.m; sourceTree = "<group>"; };
+		EF4502E41DBF08FE002DA845 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EF4502E51DBF08FE002DA845 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EF4502E71DBF38B8002DA845 /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessViewController.h; sourceTree = "<group>"; };
+		EF4502E81DBF38B8002DA845 /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessViewController.m; sourceTree = "<group>"; };
+		EF95FEA81DBEF3480051F8C8 /* FailureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailureViewController.h; sourceTree = "<group>"; };
+		EF95FEA91DBEF3480051F8C8 /* FailureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +80,16 @@
 				EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */,
 				EF3992521DBDE7E600EBC554 /* AppDelegate.h */,
 				EF3992531DBDE7E600EBC554 /* AppDelegate.m */,
+				EF4502E41DBF08FE002DA845 /* MainViewController.h */,
+				EF4502E51DBF08FE002DA845 /* MainViewController.m */,
+				EF95FEA81DBEF3480051F8C8 /* FailureViewController.h */,
+				EF95FEA91DBEF3480051F8C8 /* FailureViewController.m */,
+				EF4502E71DBF38B8002DA845 /* SuccessViewController.h */,
+				EF4502E81DBF38B8002DA845 /* SuccessViewController.m */,
+				EF4502D91DBEF95B002DA845 /* CommonParameters.h */,
+				EF4502DA1DBEF95B002DA845 /* DES3EncryptUtil */,
+				EF4502DF1DBEF95B002DA845 /* DynamicChangeCode.h */,
+				EF4502E01DBEF95B002DA845 /* DynamicChangeCode.m */,
 				EF3992681DBDE97100EBC554 /* patch */,
 				EF39925B1DBDE7E600EBC554 /* Assets.xcassets */,
 				EF39925D1DBDE7E600EBC554 /* LaunchScreen.storyboard */,
@@ -76,6 +105,17 @@
 				EF3992501DBDE7E600EBC554 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF4502DA1DBEF95B002DA845 /* DES3EncryptUtil */ = {
+			isa = PBXGroup;
+			children = (
+				EF4502DB1DBEF95B002DA845 /* DES3EncryptUtil.h */,
+				EF4502DC1DBEF95B002DA845 /* DES3EncryptUtil.m */,
+				EF4502DD1DBEF95B002DA845 /* MyBase64.h */,
+				EF4502DE1DBEF95B002DA845 /* MyBase64.m */,
+			);
+			path = DES3EncryptUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,7 +149,7 @@
 				TargetAttributes = {
 					EF39924B1DBDE7E600EBC554 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 3EY2332LG6;
+						DevelopmentTeam = MJEC23A2X6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -150,8 +190,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4502E31DBEF95C002DA845 /* DynamicChangeCode.m in Sources */,
 				EF3992541DBDE7E600EBC554 /* AppDelegate.m in Sources */,
+				EF4502E91DBF38B8002DA845 /* SuccessViewController.m in Sources */,
 				EF3992511DBDE7E600EBC554 /* main.m in Sources */,
+				EF4502E11DBEF95C002DA845 /* DES3EncryptUtil.m in Sources */,
+				EF4502E61DBF08FE002DA845 /* MainViewController.m in Sources */,
+				EF95FEAA1DBEF3480051F8C8 /* FailureViewController.m in Sources */,
+				EF4502E21DBEF95C002DA845 /* MyBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3EY2332LG6;
+				DEVELOPMENT_TEAM = MJEC23A2X6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JSPatchManual",
@@ -279,7 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3EY2332LG6;
+				DEVELOPMENT_TEAM = MJEC23A2X6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JSPatchManual",

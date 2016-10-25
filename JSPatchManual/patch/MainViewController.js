@@ -1,10 +1,14 @@
 include('UIScrollViewHelper.js')
 include('CommonDefine.js')
 
+//在使用Objective-C类之前需要调用 require('className’), 可以用逗号分隔，一次性导入多个类
 require('UIViewController,UIScrollView,NSMutableArray,UILabel,NSString,UIColor')
 
-defineClass('MainViewController: UIViewController', {
+var NSTextAlignmentCenter = 1;
+
+defineClass('BugViewController: UIViewController', {
     init: function() {
+        //使用 self.super() 接口代表 super 关键字，调用 super 方法:
         self = self.super().init();
         console.log("MainViewController init ");
         return self;
@@ -30,7 +34,9 @@ defineClass('MainViewController: UIViewController', {
                                                  width:global.SCREEN_WIDTH,
                                                 height:100});
             lbl.setText("我是第"+(i+1)+"个");
-            var NSTextAlignmentCenter = 1;
+            
+            //Objective-C 里的常量/枚举不能直接在 JS 上使用，可以直接在 JS 上用具体值代替，
+            //或者在 JS 上重新定义同名的全局变量：
             lbl.setTextAlignment(NSTextAlignmentCenter);
             //多参数方法名使用 _ 分隔，如下面的 colorWithRed_green_blue_alpha
             lbl.setBackgroundColor(UIColor.colorWithRed_green_blue_alpha((10*i)/255.0, 100/255.0, (25*i)/255.0, 1.0));

@@ -2,12 +2,14 @@
 //  AppDelegate.m
 //  JSPatchManual
 //
-//  Created by 王亮 on 16/10/24.
-//  Copyright © 2016年 王亮. All rights reserved.
+//  Created by apple on 16/10/24.
+//  Copyright © 2016年 Xcode. All rights reserved.
 //
 
 #import "AppDelegate.h"
 #import <JSPatchPlatform/JSPatch.h>
+#import "DynamicChangeCode.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,13 +19,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    MainViewController *rootVC = [[MainViewController alloc] init];
+    UINavigationController *naviVC = [[UINavigationController alloc] initWithRootViewController:rootVC];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = naviVC;
     [self.window makeKeyAndVisible];
     
-    [JPEngine startEngine];
-    NSString *sourcePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"patch/main.js"];
-    [JPEngine evaluateScriptWithPath:sourcePath];
-
+    //APP启动时下载热更新脚本
+    [DynamicChangeCode loadURLConnectionCompletion];
+    
     [self initRootViewController];
     
     return YES;
@@ -47,6 +51,9 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    //app从后台返回前台时，重新下载热更新脚本
+    [DynamicChangeCode loadURLConnectionCompletion];
 }
 
 
