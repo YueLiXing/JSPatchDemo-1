@@ -70,17 +70,4 @@
     [task resume];
 }
 
-//执行本地保存的js脚本
-+ (void)invokeLocalScript {
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *script = [user objectForKey:LOADCONTENT];
-    
-    if (!script || script.length == 0) {
-        return;
-    }
-    
-    [JPEngine startEngine];
-    NSLog(@"执行本地热更新脚本");
-    [JPEngine evaluateScript:script];
-}
 @end

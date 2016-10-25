@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"FailureVC";
+    self.title = @"FailureViewController";
     self.view.backgroundColor = [UIColor purpleColor];
 }
 

@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"SuccessVC";
+    self.title = @"SuccessViewController";
     self.view.backgroundColor = [UIColor whiteColor];
 }
 

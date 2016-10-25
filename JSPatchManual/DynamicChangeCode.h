@@ -13,7 +13,4 @@
 //从服务器下载热更新脚本
 + (void)loadURLConnectionCompletion;
 
-//执行本地保存的js脚本
-+ (void)invokeLocalScript;
-
 @end

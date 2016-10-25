@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"MainVC";
+    self.title = @"MainViewController";
     
     self.view.backgroundColor = [UIColor blueColor];
     
