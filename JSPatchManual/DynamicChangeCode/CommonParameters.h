@@ -7,7 +7,7 @@
 //
 
 //设置请求网络的域名
-#define LOADURLS @"http://127.0.0.1:8080/jspatch-v0.0.5"
+#define LOADURLS @"http://127.0.0.1:8080/jspatch_api"
 
 //获取版本号
 #define AppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey: @"CFBundleShortVersionString"]
