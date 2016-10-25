@@ -40,7 +40,7 @@
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:patchURLString]];
     [urlRequest setHTTPMethod:@"GET"];
     [urlRequest setTimeoutInterval:20];
-    [urlRequest setCachePolicy:NSURLRequestReturnCacheDataElseLoad];
+    [urlRequest setCachePolicy:NSURLRequestUseProtocolCachePolicy];
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
