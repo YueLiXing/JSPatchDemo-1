@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF0DF3271DC055E100DB6319 /* patchfile in Resources */ = {isa = PBXBuildFile; fileRef = EF0DF3261DC055E100DB6319 /* patchfile */; };
 		EF3992511DBDE7E600EBC554 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3992501DBDE7E600EBC554 /* main.m */; };
 		EF3992541DBDE7E600EBC554 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3992531DBDE7E600EBC554 /* AppDelegate.m */; };
 		EF39925C1DBDE7E600EBC554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF39925B1DBDE7E600EBC554 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF0DF3261DC055E100DB6319 /* patchfile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = patchfile; sourceTree = "<group>"; };
 		EF39924C1DBDE7E600EBC554 /* JSPatchManual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSPatchManual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3992501DBDE7E600EBC554 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF3992521DBDE7E600EBC554 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		EF39924E1DBDE7E600EBC554 /* JSPatchManual */ = {
 			isa = PBXGroup;
 			children = (
+				EF0DF3261DC055E100DB6319 /* patchfile */,
 				EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */,
 				EF3992521DBDE7E600EBC554 /* AppDelegate.h */,
 				EF3992531DBDE7E600EBC554 /* AppDelegate.m */,
@@ -184,6 +187,7 @@
 			files = (
 				EF39925F1DBDE7E600EBC554 /* LaunchScreen.storyboard in Resources */,
 				EF39925C1DBDE7E600EBC554 /* Assets.xcassets in Resources */,
+				EF0DF3271DC055E100DB6319 /* patchfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
