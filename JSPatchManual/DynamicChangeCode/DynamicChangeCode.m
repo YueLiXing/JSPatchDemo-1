@@ -26,6 +26,7 @@
     
     //上次储存的js内容不为空，直接加载
     if (oldScript && ![oldScript isEqualToString:@""]) {
+        NSLog(@"执行本地沙盒的热更新脚本");
         [JPEngine evaluateScript:oldScript];
     }
     
