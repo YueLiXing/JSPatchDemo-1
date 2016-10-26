@@ -11,6 +11,8 @@
 #import "DynamicChangeCode.h"
 #import "MainViewController.h"
 
+//#define JSPatch_Test
+
 @interface AppDelegate ()
 
 @end
@@ -58,12 +60,12 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     
-    //app从后台返回前台时，重新下载热更新脚本
 #ifdef JSPatch_Test
     [JPEngine startEngine];
     NSString *sourcePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"patchfile/1.0.js"];
     [JPEngine evaluateScriptWithPath:sourcePath];
 #else
+    //app从后台返回前台时，重新下载热更新脚本
     [DynamicChangeCode loadURLConnectionCompletion];
 #endif
 }
