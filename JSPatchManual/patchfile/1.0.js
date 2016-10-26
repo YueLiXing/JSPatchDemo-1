@@ -119,6 +119,8 @@ defineClass('UIScrollViewHelper: NSObject', {
     }
 })
 
+//Objective-C 里的常量/枚举不能直接在 JS 上使用，可以直接在 JS 上用具体值代替，
+//或者在 JS 上重新定义同名的全局变量：
 var NSTextAlignmentCenter = 1;
 var UIButtonTypeRoundedRect = 1;
 var UIControlStateNormal = 0;
