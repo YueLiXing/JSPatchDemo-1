@@ -9,7 +9,7 @@
 #import "DynamicChangeCode.h"
 #import "DES3EncryptUtil.h"
 #import "CommonParameters.h"
-#import <JSPatchPlatform/JSPatch.h>
+#import "JPEngine.h"
 
 @implementation DynamicChangeCode
 

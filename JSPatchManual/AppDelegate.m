@@ -7,11 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import <JSPatchPlatform/JSPatch.h>
+#import "JPEngine.h"
 #import "DynamicChangeCode.h"
 #import "MainViewController.h"
 
-//#define JSPatch_Test
+#define JSPatch_Test
 
 @interface AppDelegate ()
 

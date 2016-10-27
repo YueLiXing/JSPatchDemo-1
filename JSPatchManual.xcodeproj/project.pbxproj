@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EF0DF3271DC055E100DB6319 /* patchfile in Resources */ = {isa = PBXBuildFile; fileRef = EF0DF3261DC055E100DB6319 /* patchfile */; };
+		EF19A6831DC1AD0500D67A05 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19A6811DC1AD0500D67A05 /* JPEngine.m */; };
+		EF19A6841DC1AD0500D67A05 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = EF19A6821DC1AD0500D67A05 /* JSPatch.js */; };
+		EF19A6871DC1AD3800D67A05 /* UpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF19A6861DC1AD3800D67A05 /* UpdateAlertView.m */; };
 		EF3992511DBDE7E600EBC554 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3992501DBDE7E600EBC554 /* main.m */; };
 		EF3992541DBDE7E600EBC554 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3992531DBDE7E600EBC554 /* AppDelegate.m */; };
 		EF39925C1DBDE7E600EBC554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF39925B1DBDE7E600EBC554 /* Assets.xcassets */; };
@@ -23,6 +26,11 @@
 
 /* Begin PBXFileReference section */
 		EF0DF3261DC055E100DB6319 /* patchfile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = patchfile; sourceTree = "<group>"; };
+		EF19A6801DC1AD0500D67A05 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
+		EF19A6811DC1AD0500D67A05 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
+		EF19A6821DC1AD0500D67A05 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
+		EF19A6851DC1AD3800D67A05 /* UpdateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateAlertView.h; sourceTree = "<group>"; };
+		EF19A6861DC1AD3800D67A05 /* UpdateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateAlertView.m; sourceTree = "<group>"; };
 		EF39924C1DBDE7E600EBC554 /* JSPatchManual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSPatchManual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3992501DBDE7E600EBC554 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF3992521DBDE7E600EBC554 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +66,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF19A67F1DC1AD0500D67A05 /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				EF19A6801DC1AD0500D67A05 /* JPEngine.h */,
+				EF19A6811DC1AD0500D67A05 /* JPEngine.m */,
+				EF19A6821DC1AD0500D67A05 /* JSPatch.js */,
+			);
+			path = JSPatch;
+			sourceTree = "<group>";
+		};
 		EF3992431DBDE7E600EBC554 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +95,7 @@
 		EF39924E1DBDE7E600EBC554 /* JSPatchManual */ = {
 			isa = PBXGroup;
 			children = (
+				EF19A67F1DC1AD0500D67A05 /* JSPatch */,
 				EF0DF3261DC055E100DB6319 /* patchfile */,
 				EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */,
 				EF3992521DBDE7E600EBC554 /* AppDelegate.h */,
@@ -87,6 +106,8 @@
 				EF4502E81DBF38B8002DA845 /* SuccessViewController.m */,
 				EF95FEA81DBEF3480051F8C8 /* FailureViewController.h */,
 				EF95FEA91DBEF3480051F8C8 /* FailureViewController.m */,
+				EF19A6851DC1AD3800D67A05 /* UpdateAlertView.h */,
+				EF19A6861DC1AD3800D67A05 /* UpdateAlertView.m */,
 				EF50D5241DBF7A310047BA28 /* DynamicChangeCode */,
 				EF39925B1DBDE7E600EBC554 /* Assets.xcassets */,
 				EF39925D1DBDE7E600EBC554 /* LaunchScreen.storyboard */,
@@ -187,6 +208,7 @@
 			files = (
 				EF39925F1DBDE7E600EBC554 /* LaunchScreen.storyboard in Resources */,
 				EF39925C1DBDE7E600EBC554 /* Assets.xcassets in Resources */,
+				EF19A6841DC1AD0500D67A05 /* JSPatch.js in Resources */,
 				EF0DF3271DC055E100DB6319 /* patchfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF19A6871DC1AD3800D67A05 /* UpdateAlertView.m in Sources */,
+				EF19A6831DC1AD0500D67A05 /* JPEngine.m in Sources */,
 				EF50D52F1DBF7A310047BA28 /* MyBase64.m in Sources */,
 				EF3992541DBDE7E600EBC554 /* AppDelegate.m in Sources */,
 				EF4502E91DBF38B8002DA845 /* SuccessViewController.m in Sources */,

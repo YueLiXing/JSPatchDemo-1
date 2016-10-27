@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "FailureViewController.h"
+#import "UpdateAlertView.h"
 
 @interface MainViewController ()
 
@@ -30,6 +31,13 @@
     btnGoToVC.center = self.view.center;
     
     [btnGoToVC addTarget:self action:@selector(goToVC) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [UpdateAlertView showUpdateAlertViewWithMessage:@"abc" updateAction:^{
+        NSLog(@"update action");
+    }];
 }
 
 - (void)goToVC {
