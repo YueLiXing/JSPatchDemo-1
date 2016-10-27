@@ -203,6 +203,8 @@ defineClass('SuccessViewController: UIViewController', {
     }
 })
 
+// 目测JSPatch不能通过这种方式改变当前类的继承哦～～
+// FailureViewController本来继承UIViewController，现在改成继承UITableViewController，但是然并卵
 defineClass('FailureViewController: UITableViewController <UIAlertViewDelegate>', ['data'], {
     viewDidLoad: function() {
         self.super().viewDidLoad();
@@ -217,55 +219,55 @@ defineClass('FailureViewController: UITableViewController <UIAlertViewDelegate>'
         backBarButtonItem.setTitle("返回");
         self.navigationItem().setLeftBarButtonItem(backBarButtonItem);
 
-        self.tableView().setDataSource(self);
-        self.tableView().setDelegate(self);
+        //crash
+//        self.tableView().setDataSource(self);
+//        self.tableView().setDelegate(self);
     },
     doClickBackAction: function() {
         self.navigationController().popViewControllerAnimated(YES);
     },
-    // dataSource: function() {
-    //     var data = self.data();
+    dataSource: function() {
+        var data = self.data();
 
-    //     if (data) {
-    //         return data;
-    //     }
+        if (data) {
+            return data;
+        }
 
-    //     var data = [];
+        var data = [];
 
-    //     for (var i = 0; i < 20; i++) {
-    //         data.push("cell from js " + i);
-    //     }
+        for (var i = 0; i < 20; i++) {
+            data.push("cell from js " + i);
+        }
 
-    //     self.setData(data);
-    //     return data;
-    // },
-    // numberOfSectionsInTableView: function(tableView) {
-    //     return 1;
-    // },
-    // tableView_numberOfRowsInSection: function(tableView, section) {
-    //     return self.dataSource().length;
-    // },
-    // tableView_cellForRowAtIndexPath: function(tableView, indexPath) {
-    //     var cell = tableView.dequeueReusableCellWithIdentifier("cell")
+        self.setData(data);
+        return data;
+    },
+    numberOfSectionsInTableView: function(tableView) {
+        return 1;
+    },
+    tableView_numberOfRowsInSection: function(tableView, section) {
+        return self.dataSource().length;
+    },
+    tableView_cellForRowAtIndexPath: function(tableView, indexPath) {
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell")
 
-    //     if (!cell) {
-    //         cell = UITableViewCell.alloc().initWithStyle_reuseIdentifier(0, "cell")
-    //     }
+        if (!cell) {
+            cell = UITableViewCell.alloc().initWithStyle_reuseIdentifier(0, "cell")
+        }
 
-    //     cell.textLabel().setText(self.dataSource()[indexPath.row()])
-    //     return cell
-    // },
-    // tableView_heightForRowAtIndexPath: function(tableView, indexPath) {
-    //     return 60;
-    // },
-    // tableView_didSelectRowAtIndexPath: function(tableView, indexPath) {
-
-    //     var alertView = UIAlertView.alloc().initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles("Alert", self.dataSource()[indexPath.row()], self, "OK", null);
-    //     alertView.show();
-    // },
-    // alertView_willDismissWithButtonIndex: function(alertView, idx) {
-    //     console.log('click btn ' + alertView.buttonTitleAtIndex(idx));
-    // }
+        cell.textLabel().setText(self.dataSource()[indexPath.row()])
+        return cell
+    },
+    tableView_heightForRowAtIndexPath: function(tableView, indexPath) {
+        return 60;
+    },
+    tableView_didSelectRowAtIndexPath: function(tableView, indexPath) {
+        var alertView = UIAlertView.alloc().initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles("Alert", self.dataSource()[indexPath.row()], self, "OK", null);
+        alertView.show();
+    },
+    alertView_willDismissWithButtonIndex: function(alertView, idx) {
+        console.log('click btn ' + alertView.buttonTitleAtIndex(idx));
+    }
 })
 
 require('NSString,UIFont,UIScreen,UILabel,UIColor,UITableViewCell,JPTestObject')
@@ -398,8 +400,12 @@ defineClass('DemoViewController: UITableViewController <UIAlertViewDelegate>', [
     }
 })
 
-defineClass('MainViewController: UIViewController', {
+defineClass('MainViewController: UIViewController',['isGoSuccessVC'], {
     viewDidLoad: function() {
+            
+        self.isGoSuccessVC = true;
+        global.isGoSuccessVC = self.isGoSuccessVC;
+            
         self.super().viewDidLoad();
 
         self.setTitle("MainViewController");
@@ -430,9 +436,20 @@ defineClass('MainViewController: UIViewController', {
         btnGoDemoVC.addTarget_action_forControlEvents(self, "goToDemoVC", UIControlEventTouchUpInside);
     },
     goToSuccessVC: function() {
-        console.log('goToSuccessVC');
-        var successVC = require('SuccessViewController').alloc().init();
-        self.navigationController().pushViewController_animated(successVC, YES);
+        
+        self.isGoSuccessVC = global.isGoSuccessVC;
+        if (self.isGoSuccessVC) {
+            console.log('goToSuccessVC');
+            var successVC = SuccessViewController.alloc().init();
+            self.navigationController().pushViewController_animated(successVC, YES);
+        }
+        else {
+            console.log('goToFailureVC');
+            var failureVC = FailureViewController.alloc().init();
+            self.navigationController().pushViewController_animated(failureVC, YES);
+        }
+        
+        global.isGoSuccessVC = !global.isGoSuccessVC;
     },
     goToDemoVC: function() {
         console.log('goToDemoVC');
@@ -454,7 +471,9 @@ defineClass('UpdateAlertView: UIView', {
             
             self.addSubview(self.btn());
             
+            //crash
 //            self.setUpdateAction(action);
+            
             self.setUpdateAction(block("void", action));
             console.log(action);
             console.log(block("void", action));
