@@ -268,6 +268,64 @@ defineClass('FailureViewController: UITableViewController <UIAlertViewDelegate>'
     // }
 })
 
+require('NSString,UIFont,UIScreen,UILabel,UIColor,UITableViewCell,JPTestObject')
+
+defineClass('CouponEfficientTableVIewCell : UITableViewCell', {
+    drawTitle: function(context) {
+        var font = null;
+        var temp = null;
+
+        font = UIFont.systemFontOfSize(18);
+        temp = NSString.stringWithFormat("20元免息券");
+        self.temp = temp;
+        console.log("temp is " + temp);
+        console.log("self.temp is " + self.temp);
+        console.log("typeof temp is " + typeof temp);
+        console.log("typeof self.temp is " + typeof self.temp);
+        console.log("typeof \"\" is " + typeof "");
+        console.log("typeof self is " + typeof self);
+
+        var ocStr = JPTestObject.name();
+        var ocInfo = JPTestObject.info();
+        var ocUsers = JPTestObject.users();
+        console.log("typeof ocStr is " + typeof ocStr);
+        console.log("typeof ocInfo is " + typeof ocInfo);
+        console.log("typeof ocUsers is " + typeof ocUsers);
+            
+        console.log("in ocStr range is" + JPTestObject.rangeOfString_str(ocStr, "I'm"));   //OK
+//        console.log("range is" + ocStr.rangeOfString("I'm"));   //crash
+            
+        ocInfo["a"] = "b";
+        console.log(ocInfo["a"]);
+        console.log(ocUsers[0]);
+
+        if (font) {
+            
+            //??? 这样却不行
+//            var NSFontAttributeName = "NSFont";
+//            var NSForegroundColorAttributeName = "NSColor";
+//            JPTestObject.drawString_inRect_withAttributes(temp, {x: 20, y: 20, width: 100, height: 100}, {
+//                                                          NSFontAttributeName: font,
+//                                                          NSForegroundColorAttributeName: UIColor.purpleColor()
+//                                                          });
+            
+            //非得这样😂
+            JPTestObject.drawString_inRect_withAttributes(temp, {x: 20, y: 20, width: 100, height: 100}, {
+                                                              "NSFont": font,
+                                                              "NSColor": UIColor.purpleColor()
+                                                          });
+            
+            //crash
+//            temp.drawInRect_withAttributes({x: 0, y: 0, width: 100, height: 100}, {
+//                "NSFont": font,
+//                "NSColor": UIColor.whiteColor()
+//            });
+        }
+    },
+})
+
+require('CouponEfficientTableVIewCell')
+
 defineClass('DemoViewController: UITableViewController <UIAlertViewDelegate>', ['data'], {
     viewDidLoad: function() {
         self.super().viewDidLoad();
@@ -314,10 +372,10 @@ defineClass('DemoViewController: UITableViewController <UIAlertViewDelegate>', [
         var cell = tableView.dequeueReusableCellWithIdentifier("cell");
 
         if (!cell) {
-            cell = require('UITableViewCell').alloc().initWithStyle_reuseIdentifier(0, "cell");
+            cell = CouponEfficientTableVIewCell.alloc().initWithStyle_reuseIdentifier(0, "cell");
         }
 
-        cell.textLabel().setText(self.dataSource()[indexPath.row()]);
+//        cell.textLabel().setText(self.dataSource()[indexPath.row()]);
         return cell;
     },
     tableView_heightForRowAtIndexPath: function(tableView, indexPath) {

@@ -12,7 +12,7 @@
 #import "MainViewController.h"
 
 #warning 取消注释就是使用本地的js热更新文件，当前是使用从服务器下载的
-//#define JSPatch_Test
+#define JSPatch_Test
 
 @interface AppDelegate ()
 

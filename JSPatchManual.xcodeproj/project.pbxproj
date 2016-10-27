@@ -22,6 +22,7 @@
 		EF50D52E1DBF7A310047BA28 /* DynamicChangeCode.m in Sources */ = {isa = PBXBuildFile; fileRef = EF50D52A1DBF7A310047BA28 /* DynamicChangeCode.m */; };
 		EF50D52F1DBF7A310047BA28 /* MyBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = EF50D52C1DBF7A310047BA28 /* MyBase64.m */; };
 		EF95FEAA1DBEF3480051F8C8 /* FailureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF95FEA91DBEF3480051F8C8 /* FailureViewController.m */; };
+		EFD3815A1DC1F67B003CC8B8 /* CouponEfficientTableVIewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD381591DC1F67B003CC8B8 /* CouponEfficientTableVIewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		EF50D52C1DBF7A310047BA28 /* MyBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBase64.m; sourceTree = "<group>"; };
 		EF95FEA81DBEF3480051F8C8 /* FailureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailureViewController.h; sourceTree = "<group>"; };
 		EF95FEA91DBEF3480051F8C8 /* FailureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailureViewController.m; sourceTree = "<group>"; };
+		EFD381581DC1F67B003CC8B8 /* CouponEfficientTableVIewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponEfficientTableVIewCell.h; sourceTree = "<group>"; };
+		EFD381591DC1F67B003CC8B8 /* CouponEfficientTableVIewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponEfficientTableVIewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				EF95FEA91DBEF3480051F8C8 /* FailureViewController.m */,
 				EF19A6851DC1AD3800D67A05 /* UpdateAlertView.h */,
 				EF19A6861DC1AD3800D67A05 /* UpdateAlertView.m */,
+				EFD381581DC1F67B003CC8B8 /* CouponEfficientTableVIewCell.h */,
+				EFD381591DC1F67B003CC8B8 /* CouponEfficientTableVIewCell.m */,
 				EF50D5241DBF7A310047BA28 /* DynamicChangeCode */,
 				EF39925B1DBDE7E600EBC554 /* Assets.xcassets */,
 				EF39925D1DBDE7E600EBC554 /* LaunchScreen.storyboard */,
@@ -225,6 +230,7 @@
 				EF50D52F1DBF7A310047BA28 /* MyBase64.m in Sources */,
 				EF3992541DBDE7E600EBC554 /* AppDelegate.m in Sources */,
 				EF4502E91DBF38B8002DA845 /* SuccessViewController.m in Sources */,
+				EFD3815A1DC1F67B003CC8B8 /* CouponEfficientTableVIewCell.m in Sources */,
 				EF50D52E1DBF7A310047BA28 /* DynamicChangeCode.m in Sources */,
 				EF3992511DBDE7E600EBC554 /* main.m in Sources */,
 				EF4502E61DBF08FE002DA845 /* MainViewController.m in Sources */,
