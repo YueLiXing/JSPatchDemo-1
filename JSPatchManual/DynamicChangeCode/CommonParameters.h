@@ -12,7 +12,7 @@
 //获取版本号
 #define AppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey: @"CFBundleShortVersionString"]
 
-//加密串
+//加密串 与服务端keys.properties中存储的值一致
 #define LOADKEYS @"4ziINomkm*5ujN2~6zi32n]."
 
 //保存请求头version用的key

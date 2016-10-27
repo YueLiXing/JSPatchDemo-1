@@ -11,7 +11,7 @@
 #import <CommonCrypto/CommonCryptor.h>
 #import "MyBase64.h"
 
-//向量
+//向量 (该值与服务端代码 Des3Util.java 中的 iv 成员变量一致)
 #define gIv             @"64791785"
 
 @implementation DES3EncryptUtil
