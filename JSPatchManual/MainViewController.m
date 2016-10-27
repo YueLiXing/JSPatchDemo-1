@@ -33,12 +33,14 @@
     [btnGoToVC addTarget:self action:@selector(goToVC) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    [UpdateAlertView showUpdateAlertViewWithMessage:@"abc" updateAction:^{
-        NSLog(@"update action");
-    }];
-}
+// 测试block使用
+
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    
+//    [UpdateAlertView showUpdateAlertViewWithMessage:@"abc" updateAction:^{
+//        NSLog(@"update action");
+//    }];
+//}
 
 - (void)goToVC {
     FailureViewController *bugVC = [[FailureViewController alloc] init];
