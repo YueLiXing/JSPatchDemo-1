@@ -15,7 +15,6 @@
 		EF3992541DBDE7E600EBC554 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3992531DBDE7E600EBC554 /* AppDelegate.m */; };
 		EF39925C1DBDE7E600EBC554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF39925B1DBDE7E600EBC554 /* Assets.xcassets */; };
 		EF39925F1DBDE7E600EBC554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF39925D1DBDE7E600EBC554 /* LaunchScreen.storyboard */; };
-		EF3992671DBDE89B00EBC554 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */; };
 		EF4502E61DBF08FE002DA845 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4502E51DBF08FE002DA845 /* MainViewController.m */; };
 		EF4502E91DBF38B8002DA845 /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4502E81DBF38B8002DA845 /* SuccessViewController.m */; };
 		EF50D52D1DBF7A310047BA28 /* DES3EncryptUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF50D5281DBF7A310047BA28 /* DES3EncryptUtil.m */; };
@@ -39,7 +38,6 @@
 		EF39925B1DBDE7E600EBC554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF39925E1DBDE7E600EBC554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF3992601DBDE7E600EBC554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		EF4502E41DBF08FE002DA845 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EF4502E51DBF08FE002DA845 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		EF4502E71DBF38B8002DA845 /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessViewController.h; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF3992671DBDE89B00EBC554 /* JSPatchPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +97,6 @@
 			children = (
 				EF19A67F1DC1AD0500D67A05 /* JSPatch */,
 				EF0DF3261DC055E100DB6319 /* patchfile */,
-				EF3992661DBDE89B00EBC554 /* JSPatchPlatform.framework */,
 				EF3992521DBDE7E600EBC554 /* AppDelegate.h */,
 				EF3992531DBDE7E600EBC554 /* AppDelegate.m */,
 				EF4502E41DBF08FE002DA845 /* MainViewController.h */,
