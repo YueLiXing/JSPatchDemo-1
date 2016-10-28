@@ -75,7 +75,7 @@ js文件肯定不能随便往后台某个文件夹一放就让前端去下载了
 
 1. 从[https://github.com/bang590/JSPatch](https://github.com/bang590/JSPatch)下载JSPatch源码导入自己的项目中，或通过CocoaPods引入JSpatch插件。
 
-		pod 'JSPatch'
+		pod 'JSPatch', '~> 1.1'
 		安装命令：
 		pod install
         
