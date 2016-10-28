@@ -1,4 +1,7 @@
-autoConvertOCType(1)
+
+
+//这句话要谨慎使用，会自动把OC类型转成js类型，如果注释掉很多类如NSString、NSDictionary等的调用会出问题
+//autoConvertOCType(1)
 
 require('UIScreen')
 
@@ -294,34 +297,28 @@ defineClass('CouponEfficientTableVIewCell : UITableViewCell', {
         console.log("typeof ocInfo is " + typeof ocInfo);
         console.log("typeof ocUsers is " + typeof ocUsers);
             
-        console.log("in ocStr range is" + JPTestObject.rangeOfString_str(ocStr, "I'm"));   //OK
-//        console.log("range is" + ocStr.rangeOfString("I'm"));   //crash
+        console.log("range is" + ocStr.rangeOfString("I'm"));   //OK
             
-        ocInfo["a"] = "b";
-        console.log(ocInfo["a"]);
-        console.log(ocUsers[0]);
+        ocInfo['a'] = "b";
+        console.log("ocInfo['a'] is " + ocInfo['a']);
+            
+        console.log("ocUsers[0] is " + ocUsers.objectAtIndex(0).toJS());
 
         if (font) {
             
-            //??? 这样却不行
+            //这样不行哦
 //            var NSFontAttributeName = "NSFont";
 //            var NSForegroundColorAttributeName = "NSColor";
-//            JPTestObject.drawString_inRect_withAttributes(temp, {x: 20, y: 20, width: 100, height: 100}, {
-//                                                          NSFontAttributeName: font,
-//                                                          NSForegroundColorAttributeName: UIColor.purpleColor()
-//                                                          });
+//            temp.drawInRect_withAttributes({x: 20, y: 20, width: 100, height: 100}, {
+//                NSFontAttributeName: font,
+//                NSForegroundColorAttributeName: UIColor.purpleColor()
+//            });
             
             //非得这样😂
-            JPTestObject.drawString_inRect_withAttributes(temp, {x: 20, y: 20, width: 100, height: 100}, {
-                                                              "NSFont": font,
-                                                              "NSColor": UIColor.purpleColor()
-                                                          });
-            
-            //crash
-//            temp.drawInRect_withAttributes({x: 0, y: 0, width: 100, height: 100}, {
-//                "NSFont": font,
-//                "NSColor": UIColor.whiteColor()
-//            });
+            temp.drawInRect_withAttributes({x: 20, y: 20, width: 100, height: 100}, {
+               "NSFont": font,
+               "NSColor": UIColor.purpleColor()
+            });
         }
     },
 })
