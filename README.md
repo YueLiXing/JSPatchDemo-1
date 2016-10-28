@@ -8,7 +8,7 @@ https://github.com/macosunity/JSPatchDemoServer
 
 
 # 目录
-1. [什么是JSPatch](#什么是JSPatch)
+1. [什么是JSPatch](#what is jspatch)
 1. [仓库设置方法（后台文件管理）](#仓库设置方法（后台文件管理）)
 1. [JSPatch iOS端＋服务端完整Demo](#JSPatch iOS端＋服务端完整Demo)
 1. [更新策略](#更新策略)
@@ -17,7 +17,7 @@ https://github.com/macosunity/JSPatchDemoServer
 1. [JSPatch部署安全策略](#JSPatch部署安全策略)
 1. [更多思考](#JSPatchDemo)
 
-## 1. 什么是JSPatch 
+## 1. What is JSPatch 
 
 > #### 热修复
 一种即时修复bug的技术，也叫hotfix。
