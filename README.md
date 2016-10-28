@@ -15,7 +15,7 @@ https://github.com/macosunity/JSPatchDemoServer
 1. [开发步骤](#开发步骤)
 1. [JSPatch语法](#JSPatch语法)
 1. [JSPatch部署安全策略](#JSPatch部署安全策略)
-1. [更多思考](#更多思考)
+1. [更多思考](#JSPatchDemo)
 
 ## 1. 什么是JSPatch 
 
