@@ -8,18 +8,16 @@ https://github.com/macosunity/JSPatchDemoServer
 
 
 # 目录
-1. [**什么是JSPatch**](#link1)
-1. [仓库设置方法（后台文件管理）](#link2)
-1. [ios前端配置](#link3)
-1. [更新策略](#link4)
-1. [开发步骤](#link5)
-1. [JSPatch语法](#link6)
-1. [JSPatch部署安全策略](#link7)
-1. [更多思考](#link8)
+1. [什么是JSPatch](#什么是JSPatch)
+1. [仓库设置方法（后台文件管理）](#仓库设置方法（后台文件管理）)
+1. [JSPatch iOS端＋服务端完整Demo](#JSPatch iOS端＋服务端完整Demo)
+1. [更新策略](#更新策略)
+1. [开发步骤](#开发步骤)
+1. [JSPatch语法](#JSPatch语法)
+1. [JSPatch部署安全策略](#JSPatch部署安全策略)
+1. [更多思考](#更多思考)
 
-<span id='link1'>
 ## 1. 什么是JSPatch 
-</span>
 
 > #### 热修复
 一种即时修复bug的技术，也叫hotfix。
@@ -43,21 +41,16 @@ JSPatch是一个动态更新的开源的框架，可以实时的修复bug(热修
 * [JSPatch 源码分析(二)](http://www.jianshu.com/p/3d9a1c53016a)
 
 
-<span id='link2'>
 ## 2. 仓库设置方法（后台文件管理）
-</span>
+
 js文件肯定不能随便往后台某个文件夹一放就让前端去下载了，虽然使用方便但是在App或者版本较多时容易混乱。伴随时间的推移，项目也会不断的维护升级，所以后台对js热更新脚本的管理也是相当重要。为了规范起见，建议在后台直接搭建一个远程仓库，专门用来管理App端热修复的问题。
 客户端在发送请求的时候需要带上自己的APPName,Version等参数，然后根据服务器端的返回进行后续操作。
 
-<span id='link3'>
 ## 3. JSPatch iOS端＋服务端完整Demo
-</span>
 
 参考demo：[JSPatchDemo](https://github.com/macosunity/JSPatchDemo)
 
-<span id='link4'>
 ## 4. 更新策略
-</span>
 
 #### 流程简要说明
 当客户端出现bug时，iOS开发人员编写js脚本，脚本编写完成后，服务端人员根据iOS开发人员提供的js脚本通过某种安全策略部署服务端脚本，iOS客户端通过调用服务端的脚本版本检测接口，判断是否需要下载js脚本，下载脚本成功后，进行加载，运行，进而修复App的bug。
@@ -68,9 +61,8 @@ js文件肯定不能随便往后台某个文件夹一放就让前端去下载了
 * 执行补丁js代码
 
 
-<span id='link5'>
 ## 5. 开发步骤
-</span>
+
 #### 部署JSPatch环境
 
 1. 从[https://github.com/bang590/JSPatch](https://github.com/bang590/JSPatch)下载JSPatch源码导入自己的项目中，或通过CocoaPods引入JSpatch插件。
@@ -101,9 +93,7 @@ js文件肯定不能随便往后台某个文件夹一放就让前端去下载了
 	NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
 	[JPEngine evaluateScript:script];
 
-<span id='link6'>
 ## 6. JSPatch语法
-</span>
 
 这个JSPatch语法 并不是一个正式的语种，大家不会投入太大的精力来仔细学习，所以JSPatch作者本人也提供了一个简单粗暴的OC到JS直接转换工具：[JSPatchConvertor](http://bang590.github.io/JSPatchConvertor/)
 
@@ -111,9 +101,7 @@ js文件肯定不能随便往后台某个文件夹一放就让前端去下载了
 
 具体语法细节，参考JSPatch官方wiki：[https://github.com/bang590/JSPatch/wiki](https://github.com/bang590/JSPatch/wiki)
 
-<span id='link7'>
 ## 7. JSPatch 部署安全策略
-</span>
 
 使用 JSPatch 有两个安全问题：
 
@@ -123,9 +111,7 @@ js文件肯定不能随便往后台某个文件夹一放就让前端去下载了
 详细参考博客：[https://segmentfault.com/a/1190000003689114](https://segmentfault.com/a/1190000003689114)
 
 
-<span id='link8'>
 ## 8. 更多思考
-</span>
 
 * 接入了JSPatch之后，iOS的线上bug看上去就不向以前那样"猛如虎"了，但是这仅仅是一个紧急预案措施，以前规范的流程还是需要遵守。
 * 每一次本版本用JSPatch解决的线上bug，下个版本必须用OC代码写入项目中，不能允许补丁代码的存留超过一个版本。
