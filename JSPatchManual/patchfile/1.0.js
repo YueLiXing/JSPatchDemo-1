@@ -1,6 +1,6 @@
 
 
-//这句话要谨慎使用，会自动把OC类型转成js类型，如果注释掉很多类如NSString、NSDictionary等的调用会出问题
+//这句话要谨慎使用，会自动把OC类型转成js类型，如果用它的话，很多类如NSString、NSDictionary等的调用会出问题
 //autoConvertOCType(1)
 
 require('UIScreen')
