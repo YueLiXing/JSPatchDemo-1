@@ -8,14 +8,14 @@ https://github.com/macosunity/JSPatchDemoServer
 
 
 # 目录
-1. <a href="#link1">什么是JSPatch</a>
-1. <a href="#link2">仓库设置方法（后台文件管理）</a>
-1. <a href="#link3">JSPatch iOS端＋服务端完整Demo</a>
-1. <a href="#link4">更新策略</a>
-1. <a href="#link5">开发步骤</a>
-1. <a href="#link6">JSPatch语法</a>
-1. <a href="#link7">JSPatch部署安全策略</a>
-1. <a href="#link8">更多思考</a>
+1. <span id="#link1">什么是JSPatch</span>
+1. <span id="#link2">仓库设置方法（后台文件管理）</span>
+1. <span id="#link3">JSPatch iOS端＋服务端完整Demo</span>
+1. <span id="#link4">更新策略</span>
+1. <span id="#link5">开发步骤</span>
+1. <span id="#link6">JSPatch语法</span>
+1. <span id="#link7">JSPatch部署安全策略</span>
+1. <span id="#link8">更多思考</span>
 
 <span id='link1'>
 ## 1. 什么是JSPatch
@@ -41,7 +41,6 @@ JSPatch是一个动态更新的开源的框架，可以实时的修复bug(热修
 #### 深入理解
 * [JSPatch 源码分析(一)](http://www.jianshu.com/p/6cc18cfc9354)
 * [JSPatch 源码分析(二)](http://www.jianshu.com/p/3d9a1c53016a)
-
 
 <span id='link2'>
 ## 2. 仓库设置方法（后台文件管理）
