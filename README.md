@@ -9,13 +9,13 @@ https://github.com/macosunity/JSPatchDemoServer
 
 # 目录
 1. <a href="#link1">什么是JSPatch</a>
-1. <a href="#link2">仓库设置方法（后台文件管理）
-1. <a href="#link3">JSPatch iOS端＋服务端完整Demo
-1. <a href="#link4">更新策略
-1. <a href="#link5">开发步骤
-1. <a href="#link6">JSPatch语法
-1. <a href="#link7">JSPatch部署安全策略
-1. <a href="#link8">更多思考
+1. <a href="#link2">仓库设置方法（后台文件管理）</a>
+1. <a href="#link3">JSPatch iOS端＋服务端完整Demo</a>
+1. <a href="#link4">更新策略</a>
+1. <a href="#link5">开发步骤</a>
+1. <a href="#link6">JSPatch语法</a>
+1. <a href="#link7">JSPatch部署安全策略</a>
+1. <a href="#link8">更多思考</a>
 
 <span id='link1'>
 ## 1. 什么是JSPatch
